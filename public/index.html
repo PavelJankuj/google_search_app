@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search Extractor</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Vyhledávání na Google</h1>
+    <form id="searchForm">
+        <label for="keyword">Zadejte klíčové slovo:</label>
+        <input type="text" id="keyword" name="keyword" required>
+        <button type="submit">Vyhledat</button>
+    </form>
+
+    <div id="results"></div>
+    <button id="downloadBtn" style="display:none;" >Stáhnout výsledky</button>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
