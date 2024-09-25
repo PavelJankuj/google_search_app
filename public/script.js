@@ -42,5 +42,3 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
         })
         .catch(err => console.error('Chyba při stahování:', err));
 });
-
-
