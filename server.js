@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { getJson } = require('serpapi');
+const port = process.env.PORT || 3000;
 
 // Vytvoření aplikace Express
 const app = express();
@@ -44,6 +45,9 @@ app.post('/search', async (req, res) => {
         console.error(error);
         res.status(500).send('Nastala chyba při vyhledávání.');
     }
+});
+app.get('*', async(req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.get('/download', async (req, res) => {
@@ -90,7 +94,9 @@ app.get('/download', async (req, res) => {
 });
 
 
-// Spuštění serveru na portu 3000
-app.listen(3000, () => {
+
+
+ //Spuštění serveru na portu 3000
+app.listen(port, () => {
     console.log('Server běží na http://localhost:3000');
 });
